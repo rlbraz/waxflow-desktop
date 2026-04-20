@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-primary: hsl(var(--primary));
+  --color-secondary: hsl(var(--secondary));
+  --color-muted: hsl(var(--muted));
+  --color-accent: hsl(var(--accent));
+}
+
+@layer base {
+  :root, .dark {
+    --background: 240 5% 4%;
+    --foreground: 223 15% 91%;
+
+    --card: 220 13% 9%;
+    --card-foreground: 223 15% 91%;
+
+    --popover: 220 13% 9%;
+    --popover-foreground: 223 15% 91%;
+
+    --primary: 192 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 216 14% 14%;
+    --secondary-foreground: 223 15% 91%;
+
+    --muted: 216 14% 14%;
+    --muted-foreground: 211 11% 58%;
+
+    --accent: 192 100% 50%;
+    --accent-foreground: 223 15% 91%;
+
+    --destructive: 0 100% 65%;
+    --destructive-foreground: 0 0% 0%;
+
+    --border: 214 13% 20%;
+    --input: 214 13% 20%;
+    --ring: 192 100% 50%;
+
+    --radius: 0.25rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
